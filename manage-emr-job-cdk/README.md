@@ -1,19 +1,19 @@
 # Manage an Amazon EMR Job
 
-This workflow demonstrates Amazon EMR and AWS Step Functions integration. It shows how to create an Amazon EMR cluster, add multiple setps and run them, and then terminate the cluster.
+This workflow demonstrates Amazon EMR and AWS Step Functions integration. It shows how to create an Amazon EMR cluster, add multiple steps and run them, and then terminate the cluster.
 
 Important: this application uses various AWS services and there are costs associated with these services after the Free Tier usage - please see the [AWS Pricing page](https://aws.amazon.com/pricing/) for details. You are responsible for any AWS costs incurred. No warranty is implied in this example.
 
 ## Requirements
 
-* [Create an AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) if you do not already have one and log in. The IAM user that you use must have sufficient permissions to make necessary AWS service calls and manage AWS resources.
+* [Create an AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) if you do not already have one and log in. The Identity and Access Management (IAM) user that you use must have sufficient permissions to make necessary AWS service calls and manage AWS resources.
 * [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) installed and configured
 * [Git Installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [AWS Cloud Developent Kit](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install) (AWS CDK) installed
+* [AWS Cloud Development Kit](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install) (AWS CDK) installed
 
 ## Deployment Instructions
 
-1. Create a new directory, navigate to that directory in a terminal and clone the GitHub repository.
+1. Create a new directory, navigate to that directory in a terminal, and clone the GitHub repository.
     ``` 
     git clone https://github.com/aws-samples/step-functions-workflows-collection
     ```
@@ -31,7 +31,7 @@ Important: this application uses various AWS services and there are costs associ
     source .venv/bin/activate
     ```
 
-If you are a Windows platform, you would activate the virtualenv like this.
+    If you are on a Windows platform, you would activate the virtual environment like this.
 
     ```
     .venv\Scripts\activate.bat
@@ -52,7 +52,7 @@ If you are a Windows platform, you would activate the virtualenv like this.
 
 ## How it Works
 
-The workflow creates an EMR cluster, runs two steps on the EMR cluster, and then terminates the cluster.
+This workflow shows how to automate an Amazon EMR job using AWS Step Functions. The workflow creates an Amazon EMR cluster, adds multiple steps and runs them, and then terminates the cluster. The Amazon EMR task is called synchronously and the state machine waits for the task to succeed or fail. After the two steps are run on the EMR cluster, the cluster is terminated. This allows users to process and analyze data with minimal code. The AWS Cloud Development Kit (CDK) code creates all of the resources needed to run this workflow, including Identity and Access Management (IAM) roles and policies, a Simple Storage Service (S3) bucket to store EMR logs, and the State Machine for managing the EMR job.
 
 ## Image
 
