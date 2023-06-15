@@ -1,6 +1,6 @@
 {
     "title": "Manage an Amazon EMR Job",
-    "description": "Use Step Functions to Orchestrate Amazon EMR Jobs",
+    "description": "Use Step Functions to Manage Amazon EMR Jobs",
     "language": "Python",
     "simplicity": "1 - Fundamental",
     "usecase": "",
