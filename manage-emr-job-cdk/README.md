@@ -13,19 +13,23 @@ Important: this application uses various AWS services and there are costs associ
 
 ## Deployment Instructions
 
-1. Create a new directory, navigate to that directory in a terminal, and clone the GitHub repository.
+1. Bootstrap your environment if this is your first time deploying stacks with AWS CDK.
+    ``` 
+    cdk bootstrap aws://{aws-account-number}/{region}
+    ``` 
+2. Create a new directory, navigate to that directory in a terminal, and clone the GitHub repository.
     ``` 
     git clone https://github.com/aws-samples/step-functions-workflows-collection
     ```
-2. Change directory to the pattern directory.
+3. Change directory to the pattern directory.
     ```
     cd manage-emr-job-cdk
     ```
-3. From the command line, create a virtual environment.
+4. From the command line, create a virtual environment.
     ```
     python3 -m venv .venv
     ```
-4. Then, activate your virtual environment. 
+5. Then, activate your virtual environment. 
 
     ```
     source .venv/bin/activate
@@ -36,16 +40,16 @@ Important: this application uses various AWS services and there are costs associ
     ```
     .venv\Scripts\activate.bat
     ```
-5. Once the virtual environment is activated, you can install the required dependencies.
+6. Once the virtual environment is activated, you can install the required dependencies.
 
     ```
     pip install -r requirements.txt
     ```
-6. From the command line, deploy the stack by running the following command.
+7. From the command line, deploy the stack by running the following command.
     ```
     cdk deploy
     ```
-7. You will receive the following prompt. Select `y` to deploy.
+8. You will receive the following prompt. Select `y` to deploy.
     ```
     Do you wish to deploy these changes (y/n)? y
     ```
